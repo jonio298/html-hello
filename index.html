@@ -1,62 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Bootstrap Example</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-  
-    <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-512.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      Instagram
-    </a>
-    <div class="post-button">
-      <button type="button" class="btn btn-success">Create a New Post</button>
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js"></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-light bg-light">
+         <a class="navbar-brand" href="#">
+         <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-512.png" width="30" height="30" class="d-inline-block align-top" alt="">
+         Instagram
+         </a>
+         <div class="post-button">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a Post
+            </button>
+         </div>
+         <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" width="20" height="20">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+               <li><button class="dropdown-item" type="button">Profile</button></li>
+               <li><button class="dropdown-item" type="button">Accessibility</button></li>
+               <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+               <hr>
+               <li><button class="dropdown-item" type="button"><font color="red">Log Out</font></button></li>
+            </ul>
+         </div>
+         <!-- Button trigger modal -->
+      </nav>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create a New Post</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <div class="modal-body mx-3">
+                     <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Publish</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" width="20" height="20">
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <li><button class="dropdown-item" type="button">Profile</button></li>
-        <li><button class="dropdown-item" type="button">Accessibility</button></li>
-        <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
-        <hr>
-        <li><button class="dropdown-item" type="button"><font color="red">Log Out</font></button></li>
-      </ul>
-    </div>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <center>
+         <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button" onclick="openCity('London')"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAAAwMDDCwsK0tLR0dHSGhob09PTo6Oi5ubn7+/t4eHjFxcXIyMhwcHDu7u6AgIBZWVlmZmaUlJQUFBRAQEAqKiqsrKybm5tGRkbU1NQ2NjZSUlI9PT1qampeXl6jo6MdHR3R0dGMjIwNDQ0XFxcY/c8PAAADgklEQVR4nO3d6VLiQBSG4WYRSZAdRBZX9P5vcXAsyzmZ+ianI5NurPf5f0y/kwTImGAIAAAAAPC/TfuDx+5rJyer7mJQXJ8nr9xsU+dIh/4Z+gapK2osvxnYSx1Qb/XyncCr1Mt3GTTuK9ep1+40bxr4nHrlbvfNCi9lD75rtBcv4xz81OAltUi95kjRr6hl6hXHuo0tPKZecbTND9+Fp3f+uMKn1OttoIgq7FbHR+Phda1yYjdZ1o98zG3M3MwxNxw/VJcY9Y4xrAxvp745+w7Tc2+vb+acn8KG1d3g3tyJ/TftrL1zrRaG8tYuc+zeXggzO+rcg20Xhp1d5p17eyHYa96Ze67lwjA3cyP3XAirhnu/7UI7t3XPhWD3vvsgbb3QHqZ791y10P8fPm0X2tf8rnuOQo1ChUKFQo1ChUKFQoVCjUKFQoVChUKNQoVChUKFQo1ChUKFQoVCjUKFQoVChUKNQoVCJXVh6Z4bmTn/7//tjZBH99z0TIWTK6fR3szNR965g5m7985d2fuimhdeCgopzB+FFOaPQgrzRyGF+WteWPScxva+6+WNc+7GPoO0GHs3aK8r278+vHHP2etD/xXwua4Pf/41PoVfKFQoVCjUKFQoVChUKNQoVChUKFQo1ChUKFQoVCjUKFQoVChUKNQoVChUKFQo1ChUKFQoVCjUKFQoVFIXtn0/TfvPW2z6ToV9buJYeOfst4k+euf69suAua+NwvxRSGH+KKQwfxRSmD8KdeFs4HS8N3ML99yjmdsevYP2ao3n8f9kC3/+NT6FXyhUKFQo1ChUKFQoVCjUKFQoVChUKNQoVChUKFQo1ChUKFQoVCjUKFQoVChUKNQoVChU2i98NZND99zl/G31ZzPpv1+77UI7t3bPhWC/w3Linmu7sOk6QxiYSf9h2nKhPUg7S/f2qnd/+E/hdguv3+wy/Xe3VO9TOZ3Dzr3YauHuubJK/30/J+vKcOeh2A1rTe3fm+hP60c+5uxzEyPH3K6w5+DJPCYwbKrjF8B/yPyWernx3uICw13qBUfbRBaGVeoVR4r5yPZhnHrJkXbRhWFW/1MzchcfGMKh/udm46FJYAjd1Ot2OzQLvJy9uGga+Ncn8Ew1Ogc/jfN/07ht8CpqLFMX/Nvq6Zt974p8T8dF5GdRqewtJ9t9Nyf77WgZcz0IAAAAAAAAAACQjV8ovG5A6sOdbAAAAABJRU5ErkJggg==" height="30" width="30"></button>
+            <button class="w3-bar-item w3-button" onclick="openCity('Paris')"><img src="https://play-lh.googleusercontent.com/nHfzTLYYv-x74IAYGysewbjxI_gYij2Hp8z-OEch1lGiYtPlA3YmVtcg526YBvufaFs" height="20" width="20"></button>
+         </div>
+         <div id="London" class="city">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm">
+                     <img id="first-image" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2004/06/forest/10237716-2-eng-GB/Forest_pillars.jpg">
+                  </div>
+                  <div class="col-sm">
+                     <img id="second-image" src="https://thumbs.dreamstime.com/b/autumn-nature-landscape-colorful-forest-autumn-nature-landscape-colorful-forest-morning-sunlight-131400332.jpg">
+                  </div>
+                  <div class="col-sm">
+                     <img id="third-image" src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0fGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm">
+                     <img id="fourth-image" src="https://www.wilderness.org/sites/default/files/styles/1000x755/public/media/image/CO_WhiteRiver_NF_MasonCummings_160927_86-X3.jpg?h=a32b3037&itok=mkEta72m"
+                  </div>
+                  <div class="col-sm">
+                     <img id="fifth-image" src="https://assets.weforum.org/article/image/jFD2YAgGOrjUiybTPwAGBzfzRpIzMENUNafpzaRwnKs.jpg">
+                  </div>
+                  <div class="col-sm">
+                     <img id="sixth-image" src="https://i0.wp.com/eos.org/wp-content/uploads/2022/04/dominica-forest.jpg?fit=1200%2C675&ssl=1">
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm">
+                     <img id="seventh-image" src="https://www.explore.com/img/gallery/beautiful-forests-around-the-world/dreamstime_m_61075202.jpg">
+                  </div>
+                  <div class="col-sm">
+                     <img id="eigth-image" src="https://media.timeout.com/images/105669731/750/562/image.jpg">
+                  </div>
+                  <div class="col-sm">
+                     <img id="nineth-image" src="https://static.photocrowd.com/upl/3m/cms.Wl4JJNTjmGx8TN459Mbw-hd.jpeg">
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         <div id="Paris" class="city"></div>
+         <div class="container">
+            <div class="post">
+               <div class="post-header">
+                  <div>
+                     <h2>First Photo</h2>
+                  </div>
+                  <div>
+                     <span>2/28/2023</span>
+                  </div>
+               </div>
+               <div>
+                  <img src="https://picsum.photos/400/200"></img>
+               </div>
+               <div>
+                  <p>Captions here</p>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+          <div class="post">
+             <div class="post-header">
+                <div>
+                   <h2>Second Photo</h2>
+                </div>
+                <div>
+                   <span>2/28/2023</span>
+                </div>
+             </div>
+             <div>
+                <img src="https://picsum.photos/400/200"></img>
+             </div>
+             <div>
+                <p>Captions here</p>
+             </div>
+          </div>
+       </div>
+       <div class="container">
+        <div class="post">
+           <div class="post-header">
+              <div>
+                 <h2>Third Photo</h2>
+              </div>
+              <div>
+                 <span>2/28/2023</span>
+              </div>
+           </div>
+           <div>
+              <img src="https://picsum.photos/400/200"></img>
+           </div>
+           <div>
+              <p>Captions here</p>
+           </div>
+        </div>
+     </div>
+     <div class="container">
+      <div class="post">
+         <div class="post-header">
+            <div>
+               <h2>Fourth Photo</h2>
+            </div>
+            <div>
+               <span>2/28/2023</span>
+            </div>
+         </div>
+         <div>
+            <img src="https://picsum.photos/400/200"></img>
+         </div>
+         <div>
+            <p>Captions here</p>
+         </div>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-  </head>
-<body>
-  
-</body>
+   </div>
+      </center>
+   </body>
 </html>
